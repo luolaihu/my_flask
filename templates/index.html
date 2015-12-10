@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>StartUp | EO - Etron And Auto</title>
+		<link href="http://www.bootcss.com/p/layoutit/css/bootstrap-combined.min.css" rel="stylesheet">
+	<head>
+	<body>
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="navbar">
+						<div class="navbar-inner">
+							<div class="container-fluid">
+								<a class="btn btn-navbar" data-target=".navbar-responsive-collapse" data-toggle="collapse"></a> <a class="brand" href="#">StartUp</a>
+								<div class="nav-collapse collapse navbar-responsive-collapse">
+									<ul class="nav">
+										<li class="active">
+											<a href="/">主页</a>
+										</li>
+										<li>
+											<a href="/hr">招聘</a>
+										</li>
+										<li>
+											<a href="/about">关于我们</a>
+										</li><br />
+									</ul>
+									<ul class="nav pull-right">
+										<br />
+										<li class="divider-vertical">
+										</li><br />
+										
+									</ul>
+								</div>
+								
+							</div>
+						</div>
+						
+					</div>
+					<div class="carousel slide" id="carousel-543742">
+						<ol class="carousel-indicators">
+							<li data-slide-to="0" data-target="#carousel-543742">
+							</li>
+							<li class="active" data-slide-to="1" data-target="#carousel-543742">
+							</li>
+							<li data-slide-to="2" data-target="#carousel-543742">
+							</li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="item">
+								<img alt="" src="/static/img/1.jpg" />
+								<div class="carousel-caption">
+									<h1>
+										侧撞预防
+									</h1>
+									<h4>
+										当与侧面的车辆或其他物体距离太近时，自动驾驶汽车会发出警报。
+									</h4>
+								</div>
+							</div>
+							<div class="item active">
+								<img alt="" src="/static/img/2.jpg" />
+								<div class="carousel-caption">
+									<h1>
+										自动平行泊车
+									</h1>
+									<h4>
+										当探测到合适的泊车地点后，自动驾驶汽车会根据指令自行泊入车位。
+									</h4>
+								</div>
+							</div>
+							<div class="item">
+								<img alt="" src="/static/img/3.jpg" />
+								<div class="carousel-caption">
+									<h1>
+										自动车道变更
+									</h1>
+									<h4>
+										开启转向灯即可完成自动变道
+									</h4>
+								</div>
+							</div>
+						</div> <a class="left carousel-control" data-slide="prev" href="#carousel-543742">‹</a> <a class="right carousel-control" data-slide="next" href="#carousel-543742">›</a>
+					</div>
+					
+				<div class="container-fluid">
+					
+					{% for i in sort %}
+						{% if i is divisibleby 4 %}
+							{% if i != 0 %}
+									</ul>
+								</div>
+							</div>
+							{% endif %}						
+							<div class="row-fluid">
+								<div class="span12">
+									<ul class="thumbnails">
+						{% endif %}		
+							<li class="span3">
+									<div class="thumbnail">
+										<div class="caption">
+											<h4>
+												{{ articles[i]['title'] }}
+											</h4>
+											<p>
+												{{ articles[i]['cleaned_text'][0:100]}}
+											</p>
+											<p>
+												<a class="btn btn-primary" href="/{{day}}/{{i+1}}">浏览</a>
+											</p>
+										</div>
+									</div>
+							</li>					
+					{% endfor %}
+									</ul>
+								</div>
+							</div>
+				
+				</div>
+
+					<p>
+						<strong>StartUp, Inc.</strong>
+					</p>
+					<p>
+						ShangHai 1988
+					</p>
+				</div>
+			</div>
+		</div>
+		<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+		<script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	</body>
+</html>
